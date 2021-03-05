@@ -33,27 +33,20 @@ function messageon() {
             console.log(Content);
             if (Content == "take my selfie") {
                 console.log("taking selfie --- ");
-                speak();
+                setcam();
             }
         }
     }
 
 
-    function speak() {
-        var synth = window.speechSynthesis;
+    function setcam() {
 
-        speak_data = "Taking you Selfie in 5 seconds";
-
-        var utterThis = new SpeechSynthesisUtterance(speak_data);
-
-        synth.speak(utterThis);
 
         Webcam.attach(camera);
 
         setTimeout(function () {
             take_snapshot();
-            save();
-        }, 5000);
+                 }, 5000);
     }
 
 
@@ -72,16 +65,14 @@ function messageon() {
     }
 
 
-    function save() {
-        link = document.getElementById("link");
-        image = document.getElementById("selfie_image").src;
-        link.href = image;
-        link.click();
-    }
+
+    
     function send() {
         window.alert("Message sent");
         document.getElementById("textbox").innerHTML="";
     }
+
+
     function send1() {
         window.alert("Picture sent");
         document.getElementById("textbox1").innerHTML="";
