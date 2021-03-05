@@ -1,0 +1,53 @@
+<html>
+    <head>
+       <title>My Selfie App </title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link href="style.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+    <center>
+      
+        <h1>Welcome to my Messenger
+        <img id="logo_img" src="messenger.png">
+        </h1>
+        <hr>
+        <h4 style="color:red;">Click on the mic to start recording. Once you see your message on the input box, click send.</h4>
+        
+        <div class="form-group">
+        <img onclick="messageon()" src="mic.jpg"> <span> <h3>Say your message here</h3></span></img>
+       
+        <label>Your voice output : </label>
+        <textarea class="form-control" id="textbox" readonly="true"></textarea>
+        <br>
+       <button type="button" class="btn btn-primary" onclick="send()"> Send </button>
+        </div>
+        <hr>
+        <h4 style="color:red;">Click on the camera and say "Take my selfie" to start taking photos. Once done, click send.</h4>
+        <div class="form-group">
+            <img onclick="cam()" src="cam.jfif"> <span> <h3>Take photo here</h3></span></img>
+            <textarea class="form-control" id="textbox1" readonly="true"></textarea>
+            <br>
+            <div id="camera"></div>
+            <br>
+            <label>Your picture will be displayed here: </label>
+            <div id="result"></div>
+            <br>
+         <button type="button" class="btn btn-primary" onclick="send1()"> Send </button>
+            </div>
+            
+        
+    </center>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
